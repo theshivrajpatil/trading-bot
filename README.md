@@ -16,17 +16,20 @@ A simple Python CLI trading bot to place orders on Binance Futures Testnet (USDT
 
 ## Project Structure
 trading-bot/
+│
 ├── bot/
-│   └── cli.py
-│   └──client.py
-│   └── orders.py
-│   └── validators.py
-│   └── config.py
-│   └── logger.py
-│   └── exceptions.py
+│   ├── cli.py           # CLI entry point
+│   ├── client.py        # Binance client setup
+│   ├── orders.py        # Order execution logic
+│   ├── validators.py    # Input validation
+│   ├── config.py        # Environment variables
+│   ├── logger.py        # Logging setup
+│   └── exceptions.py    # Custom exceptions
+│
 ├── ui/
-│   └── app.py
-├── logs/
+│   └── app.py           # Streamlit UI (optional)
+│
+├── logs/                # Log files
 ├── requirements.txt
 └── README.md
 ---
