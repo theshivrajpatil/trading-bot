@@ -69,12 +69,14 @@ BASE_URL=https://testnet.binancefuture.com
 ---
 
 ## Run
+
 python bot/cli.py
 ---
 
 ## Example Runs
 
 ### MARKET Order
+
 BTCUSDT
 BUY
 MARKET
@@ -83,6 +85,7 @@ yes
 ---
 
 ### LIMIT Order
+
 BTCUSDT
 SELL
 LIMIT
@@ -92,6 +95,7 @@ yes
 ---
 
 ### STOP-LIMIT Order
+
 BTCUSDT
 BUY
 STOP_LIMIT
