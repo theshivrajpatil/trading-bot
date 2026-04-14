@@ -37,7 +37,7 @@ trading-bot/
 ## Setup
 
 ### 1. Clone repo
-git clone https://github.com/yourusername/trading-bot.git
+git clone https://github.com/theshivrajpatil/trading-bot.git
 cd trading-bot
 ---
 
