@@ -41,7 +41,7 @@ trading-bot/
 **1. Clone the repo**
 
 ```bash
-git clone https://github.com/your-username/trading-bot.git
+git clone https://github.com/theshivrajpatil/trading-bot.git
 cd trading-bot
 ```
 
