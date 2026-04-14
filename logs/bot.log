@@ -1,0 +1,6 @@
+2026-04-15 00:45:35,022 | INFO | Request: BTCUSDT BUY MARKET qty=1.0
+2026-04-15 00:45:35,532 | ERROR | Error: BinanceRequestException: Invalid Response: 
+2026-04-15 00:53:28,763 | INFO | Request: BTCUSDT BUY MARKET qty=0.001
+2026-04-15 00:53:29,275 | ERROR | Error: BinanceRequestException: Invalid Response: 
+2026-04-15 00:56:23,936 | INFO | Request: BTCUSDT BUY MARKET qty=0.0001
+2026-04-15 00:56:24,397 | ERROR | Error: BinanceRequestException: Invalid Response: 
