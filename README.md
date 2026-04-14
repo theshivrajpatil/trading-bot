@@ -1,126 +1,143 @@
 # Binance Futures Testnet Trading Bot
 
-A simple Python CLI trading bot to place orders on Binance Futures Testnet (USDT-M).
+A CLI-based trading bot for the Binance Futures Testnet (USDT-M). Built in Python, it lets you place market, limit, and stop-limit orders directly from the terminal — with an optional Streamlit UI if you prefer a browser interface.
 
 ---
 
 ## Features
 
-- Place MARKET, LIMIT, and STOP-LIMIT orders  
-- Supports BUY and SELL  
-- Input validation  
-- Logs API requests and responses  
-- Clean modular structure  
+- Place **Market**, **Limit**, and **Stop-Limit** orders
+- Supports both **BUY** and **SELL** sides
+- Input validation before any order is sent
+- Logs all API requests, responses, and errors
+- Clean modular structure — easy to read and extend
+- Optional **Streamlit UI** (`ui/app.py`)
 
 ---
 
 ## Project Structure
 
+```
 trading-bot/
-│
 ├── bot/
-│   ├── cli.py           # CLI entry point
-│   ├── client.py        # Binance client setup
-│   ├── orders.py        # Order execution logic
-│   ├── validators.py    # Input validation
-│   ├── config.py        # Environment variables
-│   ├── logger.py        # Logging setup
-│   └── exceptions.py    # Custom exceptions
-│
+│   ├── cli.py          # Command-line interface
+│   ├── client.py       # Binance API client
+│   ├── orders.py       # Order placement logic
+│   ├── validators.py   # Input validation
+│   ├── config.py       # API keys and settings
+│   ├── logger.py       # Logging setup
+│   └── exceptions.py   # Custom exceptions
 ├── ui/
-│   └── app.py           # Streamlit UI (optional)
-│
-├── logs/                # Log files
+│   └── app.py          # Streamlit UI (optional)
+├── logs/               # Log files stored here
 ├── requirements.txt
 └── README.md
+```
+
 ---
 
 ## Setup
 
-### 1. Clone repo
+**1. Clone the repo**
 
-git clone https://github.com/theshivrajpatil/trading-bot.git
+```bash
+git clone https://github.com/your-username/trading-bot.git
 cd trading-bot
----
+```
 
-### 2. Create virtual environment
+**2. Create a virtual environment**
 
-python3 -m venv venv
-source venv/bin/activate
----
+```bash
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+```
 
-### 3. Install dependencies
+**3. Install dependencies**
 
+```bash
 pip install -r requirements.txt
----
+```
 
-### 4. Add API keys
+**4. Add your API keys**
 
-Create `.env` file in root:
-API_KEY=your_testnet_api_key
-API_SECRET=your_testnet_secret
-BASE_URL=https://testnet.binancefuture.com
----
+Open `bot/config.py` and fill in your Binance Futures Testnet credentials:
 
-## Testnet Setup (IMPORTANT)
+```python
+API_KEY = "your_testnet_api_key"
+API_SECRET = "your_testnet_api_secret"
+```
 
-1. Go to: https://testnet.binancefuture.com  
-2. Login (GitHub recommended)  
-3. Add funds using **Faucet**  
-4. Create API keys  
-5. Use those keys in `.env`  
+> Get your testnet keys at: https://testnet.binancefuture.com
 
 ---
 
-## Run
+## How to Run
 
-python bot/cli.py
+**CLI mode**
+
+```bash
+python -m bot.cli
+```
+
+**Streamlit UI**
+
+```bash
+streamlit run ui/app.py
+```
+
 ---
 
-## Example Runs
+## Example Inputs
 
-### MARKET Order
+**Market Order**
 
-BTCUSDT
-BUY
-MARKET
-0.001
-yes
----
+```
+Symbol:     BTCUSDT
+Side:       BUY
+Order Type: MARKET
+Quantity:   0.001
+```
 
-### LIMIT Order
+**Limit Order**
 
-BTCUSDT
-SELL
-LIMIT
-0.001
-80000
-yes
----
+```
+Symbol:     BTCUSDT
+Side:       SELL
+Order Type: LIMIT
+Quantity:   0.001
+Price:      65000
+```
 
-### STOP-LIMIT Order
+**Stop-Limit Order**
 
-BTCUSDT
-BUY
-STOP_LIMIT
-0.001
-60000
-61000
-yes
+```
+Symbol:      BTCUSDT
+Side:        BUY
+Order Type:  STOP_LIMIT
+Quantity:    0.001
+Price:       67000
+Stop Price:  66500
+```
+
 ---
 
 ## Logs
 
-Logs are saved in:logs/bot.log
+All logs are saved in the `logs/` directory. Each session logs:
+
+- Outgoing API requests
+- Responses from Binance
+- Any errors or validation failures
+
 ---
 
 ## Notes
 
-- Works only on Binance Futures Testnet  
-- Use small quantities (e.g., 0.001 BTC)  
-- `.env` file is not included for security  
+- This bot runs on the **Testnet only** — no real funds are used.
+- Make sure your testnet account has enough balance before placing orders.
+- Minimum quantity for BTCUSDT is `0.001` — going lower will throw a validation error.
+- Do not use production API keys with this project.
 
----
 
 ## Author
 
