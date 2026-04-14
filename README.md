@@ -15,6 +15,7 @@ A simple Python CLI trading bot to place orders on Binance Futures Testnet (USDT
 ---
 
 ## Project Structure
+
 trading-bot/
 │
 ├── bot/
@@ -37,16 +38,19 @@ trading-bot/
 ## Setup
 
 ### 1. Clone repo
+
 git clone https://github.com/theshivrajpatil/trading-bot.git
 cd trading-bot
 ---
 
 ### 2. Create virtual environment
+
 python3 -m venv venv
 source venv/bin/activate
 ---
 
 ### 3. Install dependencies
+
 pip install -r requirements.txt
 ---
 
