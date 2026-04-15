@@ -4,3 +4,7 @@
 2026-04-15 00:53:29,275 | ERROR | Error: BinanceRequestException: Invalid Response: 
 2026-04-15 00:56:23,936 | INFO | Request: BTCUSDT BUY MARKET qty=0.0001
 2026-04-15 00:56:24,397 | ERROR | Error: BinanceRequestException: Invalid Response: 
+2026-04-15 19:10:45,550 | INFO | Request: BTCUSDT BUY MARKET qty=0.0001
+2026-04-15 19:10:46,128 | ERROR | Error: APIError(code=-4164): Order's notional must be no smaller than 50 (unless you choose reduce only).
+2026-04-15 19:13:04,768 | INFO | Request: BTCUSDT BUY MARKET qty=0.001
+2026-04-15 19:13:05,184 | INFO | Response: {'orderId': 13037081478, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'F8UE3U0bF6CAM3dapkSrR9', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776260585328}
